@@ -17578,14 +17578,14 @@ img#wpstats {
     /* Custom, iPhone Retina */ 
     @media only screen and (min-width : 320px) {
         .swiper-slide {
-	background-image: url('wp-content/uploads/2015/11/my-photo-5-320.jpg');
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-768.jpg');
 }
     }
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (min-width : 480px) {
 		.swiper-slide {
-	background-image: url('wp-content/uploads/2015/11/my-photo-5-480.jpg');
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-768.jpg');
 }
     }
 
