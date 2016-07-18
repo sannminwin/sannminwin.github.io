@@ -17573,6 +17573,45 @@ img#wpstats {
 }*/
 
 
+
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        .swiper-slide {
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-320.jpg');
+}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+		.swiper-slide {
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-480.jpg');
+}
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+		.swiper-slide {
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-768.jpg');
+}
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+		.swiper-slide {
+	background-image: url('wp-content/uploads/2015/11/my-photo-5-992.jpg');
+}
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+		.swiper-slide {
+	background-image: url('wp-content/uploads/2015/11/my-photo-5.jpg');
+}
+
+    }
+
+
 .swiper-slide h1,
 .swiper-slide p {
 	color:#000;
