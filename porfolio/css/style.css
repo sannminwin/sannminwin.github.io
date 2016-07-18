@@ -1,0 +1,185 @@
+/*Custom CSS File*/
+
+/** {
+	outline:1px solid red;
+}*/
+
+
+.swiper-slide h1,
+.swiper-slide p {
+	color:#000;
+	font-weight:bold;
+}
+
+.site-title a, .main-navigation a {
+    color: #0E7BFF;
+}
+
+.swiper-slide {
+	padding-top:120px;
+
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale( .75);
+  }
+  20% {
+    transform: scale( 1);
+  }
+  40% {
+    transform: scale( .75);
+  }
+  60% {
+    transform: scale( 1);
+  }
+  80% {
+    transform: scale( .75);
+  }
+  100% {
+    transform: scale( .75);
+  }
+}
+
+#heart {
+  position: relative;
+  width: 100px;
+  height: 60px;
+  animation: heartbeat 2s infinite;
+}
+
+#heart:before,
+#heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 75px;
+  background: #FF073C;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+#heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.heart {
+  text-align: center;
+}
+
+.heart i.fa-plus,
+.heart i.fa-hand-o-down{
+  font-size:5em;
+  padding:10px;
+}
+
+.heart h2 {
+  font-size: 5.5em;
+}
+
+/*Color Scheme*/
+
+
+/*.icon-service-module .icon-service-box:hover .service-icon,
+.portfolio-module {
+    background-color: #FFCC00;
+}
+
+.contact-module .separator i,
+.process-module .separator i,
+.icon-service-module .separator i,
+a:hover, .main-navigation li.current-menu-item a, .main-navigation a:hover,
+h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, .bcrumbs .active, article a, .woocommerce div.product p.price, .woocommerce div.product span.price, .woocommerce div.product .stock, .woocommerce .woocommerce-info::before, .woocommerce .woocommerce-message::before, .woocommerce a.remove, .woocommerce ul.product_list_widget ins, .product_meta span a {
+    color: #FFCC00;
+}
+
+blockquote {
+    border-left-color: #0E7BFF;
+}
+
+.icon-service-module .icon-service-box:hover .service-icon  {
+  border-color:#fff;
+}
+*/
+
+.process-module h2,
+.process-module p,
+.process-module .separator span {
+    color: #000;
+}
+
+
+.process-module, .line-process-wrapper .owl-dot.active span {
+    background-color: #181a1c;
+}
+
+.process-module {
+    color: #451348;
+    background-image: none;
+  background-color: #fff
+}
+
+.process-module .fa,
+.process-module li,
+.process-module .owl-dot span {
+  color:#000;
+  
+}
+
+.contact-module, #gmap .circle-left, #gmap .circle-right {
+    background-color: #fff;
+}
+
+.contact-module h2,
+.contact-module p,
+.contact-module .ci-title,
+.contact-module .ci-content {
+color:#000;
+}
+
+.contact-module .contact-item .ci-icon {
+  color:#000;      
+  border-left: 1px solid #000;
+}
+
+.contact-module .contact-form textarea, .contact-form input[type="text"], .contact-form input[type="email"] {
+    
+    border-bottom: 1px solid #000;
+    color:#000;
+}
+
+.contact-module button {
+
+    color: #000 !important;
+    border: 2px solid rgba(000,000,000,.7) !important;
+}
+
+
+.contact-module .btn-light:hover {
+    color: #000 !important;
+    background: #FFCC00 !important;
+  border: 2px solid #FFCC00 !important;
+}
+
