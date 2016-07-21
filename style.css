@@ -17790,4 +17790,63 @@ color:#000;
   border: 2px solid #FFCC00 !important;
 }
 
+.scroll-down {
+	color:red;
 }
+
+.scroll-down {
+	cursor:pointer;
+	position:absolute;
+	left:50%;
+	bottom:40px;
+	width:24px;
+	height:40px;
+	margin-left:-12px;
+	border-radius:12px;
+	border:2px solid yellow;
+	z-index:999
+		background:#000 !important;
+}
+.scroll-down:before {
+	content:"";
+	display:block;
+	width:2px;
+	height:6px;
+	margin:5px
+auto;
+	-webkit-animation-duration:1s;
+	animation-duration:1s;
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+	-webkit-animation-name:scroll;
+	animation-name:scroll
+}
+@-webkit-keyframes
+scroll {
+	0% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+		transform:translateY(0)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:translateY(25px);
+		transform:translateY(25px)
+	}
+}
+@keyframes
+scroll {
+	0% {
+		opacity:1;
+		-webkit-transform:translateY(0);
+		transform:translateY(0)
+	}
+	100% {
+		opacity:0;
+		-webkit-transform:translateY(25px);
+		transform:translateY(25px)
+	}
+}
+

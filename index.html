@@ -60,6 +60,41 @@ img.emoji {
 <link rel="stylesheet" href="style.css" type="text/css">
     
 
+
+ <!-- CSS -->
+        
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        
+        <link rel="stylesheet" href="assets/css/formValidation.min.css"/>
+        
+        <link rel="stylesheet" href="assets/css/intlTelInput.css">
+        
+
+        <!-- Javascript -->
+      <!--   <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/retina-1.1.0.min.js"></script>
+        <script src="assets/js/formValidation.min.js"></script>
+        <script src="assets/js/formvalidation.bootstrap.min.js"></script>
+        <script src="assets/js/intlTelInput.min.js"></script>
+         <script src="assets/js/scripts.js"></script> -->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  	<script src="assets/js/jquery.backstretch.min.js"></script>
+  	<script src="assets/js/retina-1.1.0.min.js"></script>
+  	<script src="assets/js/formValidation.min.js"></script>
+   	<script src="assets/js/formvalidation.bootstrap.min.js"></script> -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+
+
+        
+
+
+
+
+
+  
 <meta name="msapplication-TileImage" content="http://i1.wp.com/Sann Web Design.sannwebdesign.com/wp-content/uploads/2015/09/cropped-icon.png?fit=270%2C270" />
 </head>
 
@@ -115,7 +150,7 @@ img.emoji {
 									<h1 data-animation="zoomInDown" data-animation-delay="500">
 										 Hi!</br>
 										 I am <span>Sann Min Win</span></br>
-										 I love <span>Designing Website</span>
+										 I love <span>Designing Websites</span>
 									</h1>
 									<p data-animation="zoomInUp" data-animation-delay="250">
 										 Together we can make the internet a better space!
@@ -468,19 +503,19 @@ img.emoji {
 					<div id="contact-form-result"><span></span></div>
 
 					<fieldset class="col-sm-4">
-						<input type="text" id="contact-form-name" name="name" placeholder="Name" value="" class="cf-form-control required" data-msg-required="This field is required." />
+						<input type="text" id="contact-form-name" name="name" placeholder="Name" value="" name="name" class="cf-form-control required" data-msg-required="This field is required." />
 					</fieldset>
 
 					<fieldset class="col-sm-4">
-						<input type="email" id="contact-form-email" name="email" placeholder="Email" value="" class="required email cf-form-control" data-msg-required="This field is required." data-msg-email="Invalid email address." />
+						<input type="email" id="contact-form-email" name="email" placeholder="Email" value="" name="email" lass="required email cf-form-control" data-msg-required="This field is required." data-msg-email="Invalid email address." />
 					</fieldset>
 
 					<fieldset class="col-sm-4">
-						<input type="text" id="contact-form-phone" name="phone" placeholder="Phone" value="" class="cf-form-control" />
+						<input type="text" id="contact-form-phone" name="phone" placeholder="Phone" value="" name="phone" class="cf-form-control" />
 					</fieldset>
 
 					<fieldset class="col-sm-12">
-						<input type="text" id="contact-form-subject" name="subject" placeholder="Subject" value="" class="required cf-form-control" data-msg-required="This field is required." />
+						<input type="text" id="contact-form-subject" name="subject" placeholder="Subject" value="" name="subject" class="required cf-form-control" data-msg-required="This field is required." />
 					</fieldset>
 
 					<fieldset class="col-sm-12">
@@ -565,6 +600,73 @@ var app_vars = {"ajax_url":"http:\/\/Sann Web Design.sannwebdesign.com\/wp-admin
 /* ]]> */
 </script>
 <script type='text/javascript' src='wp-content/plugins/bwp-minify/min/indexfc11.html?f=wp-content/themes/Sann Web Design-pro/js/owl.carousel.min.js,wp-content/themes/Sann Web Design-pro/js/jquery.flexslider.min.js,wp-content/themes/Sann Web Design-pro/js/idangerous.swiper.min.js,wp-content/themes/Sann Web Design-pro/js/jquery.validate.min.js,wp-content/themes/Sann Web Design-pro/js/jquery.count.to.js,wp-content/themes/Sann Web Design-pro/js/jquery.waypoints.min.js,wp-content/themes/Sann Web Design-pro/js/app.js,wp-includes/js/wp-embed.min.js'></script>
+
+
+<script>
+$(document).ready(function() {
+    $('#contact-form').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            name: {
+                validators: {
+                    notEmpty: {
+                        message: 'Name is required'
+                    },
+                    stringLength: {
+                        min: 5,
+                        max: 16,
+                        message: 'Name must be more than 5 and less than 16 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z ]+$/,
+                        message: 'Name can only consist of alphabetical and space'
+                    }
+                }
+            },
+        phone: {
+                
+            validators: {
+                notEmpty: {
+                        message: 'Phone Number is required'
+                    },
+                callback: {
+                    message: 'The phone number is not valid',
+                    callback: function(value, validator, $field) {
+                        return value === '' || $field.intlTelInput('isValidNumber');
+                    }
+                }
+
+            }
+        },
+        message: {
+                validators: {
+                    notEmpty: {
+                        message: 'Message is required'
+                    },
+                    stringLength: {
+                        min: 10,
+                        max: 60,
+                        message: 'Message must be more than 10 and less than 60 characters long'
+                    },
+                    regexp: {
+                        regexp: /^[a-zA-Z0-9_ .;:'"?,!]+$/, 
+                        message: 'Message can only consist of alphabetical, space and dot'
+                    }
+                }
+            },
+        }
+    });
+});
+</script>
+
+
+
 
 </body>
 
